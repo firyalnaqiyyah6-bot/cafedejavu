@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Deja Vu Cafe</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css"/>
+</head>
+<body>
+  <header class="site-header">
+    <a class="logo" href="#home">
+      <img src="assets/img/logo.svg" alt="Deja Vu Cafe Logo" width="36" height="36">
+      <span>Deja&nbsp;Vu Cafe</span>
+    </a>
+    <nav class="nav">
+      <a href="#home">Home</a>
+      <a href="#terlaris">Terlaris</a>
+      <a href="#menu">Menu</a>
+      <a href="#testimoni">Testimoni</a>
+      <a href="#kontak">Kontak</a>
+      <button class="cart-btn" aria-label="Buka keranjang" id="openCart">
+        <span class="cart-count" id="cartCount">0</span>
+        <svg viewBox="0 0 24 24" aria-hidden="true" width="24" height="24">
+          <path d="M7 4h-2l-1 2h2l3.6 7.59-1.35 2.44A2 2 0 0 0 10 18h9v-2h-8.42a.25.25 0 0 1-.22-.13l.03-.05L12.1 13h5.55a2 2 0 0 0 1.79-1.11L22 6H6.42l-.7-2zM7 20a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm10 0a2 2 0 1 0 0-4 2 2 0 0 0 0 4z" />
+        </svg>
+      </button>
+    </nav>
+  </header>
+
+  <main id="home">
+    <section class="hero">
+      <div class="hero__content">
+        <h1>Ngopi, Ngobrol, <span class="accent">Deja&nbsp;Vu!</span></h1>
+        <p>Rasakan nuansa hangat dengan aroma kopi pilihan dan pastry yang baru dipanggang setiap hari.</p>
+        <a href="#terlaris" class="btn btn-primary">Lihat Produk Terlaris</a>
+      </div>
+      <div class="hero__art" aria-hidden="true">
+        <img src="assets/img/coffee.svg" alt="" />
+      </div>
+    </section>
+
+    <section id="terlaris" class="section">
+      <div class="section__head">
+        <h2>Produk Terlaris</h2>
+        <p>Top picks minggu ini — maksimal 5 item.</p>
+      </div>
+
+      <div class="slider" data-slider>
+        <button class="slider__ctrl prev" data-prev aria-label="Sebelumnya">‹</button>
+        <div class="slider__track" data-track>
+          <!-- Slides (max 5) -->
+          <article class="product-card" data-product='{"id":"coffee-latte","name":"Coffee Latte","price":28000}'>
+            <img src="assets/img/coffee.svg" alt="Coffee Latte">
+            <h3>Coffee Latte</h3>
+            <p class="price">Rp 28.000</p>
+            <button class="btn add-cart">Tambah ke Keranjang</button>
+          </article>
+
+          <article class="product-card" data-product='{"id":"croissant-butter","name":"Croissant Butter","price":22000}'>
+            <img src="assets/img/croissant.svg" alt="Croissant Butter">
+            <h3>Croissant Butter</h3>
+            <p class="price">Rp 22.000</p>
+            <button class="btn add-cart">Tambah ke Keranjang</button>
+          </article>
+
+          <article class="product-card" data-product='{"id":"redvelvet-slice","name":"Red Velvet Slice","price":26000}'>
+            <img src="assets/img/cake.svg" alt="Red Velvet Slice">
+            <h3>Red Velvet Slice</h3>
+            <p class="price">Rp 26.000</p>
+            <button class="btn add-cart">Tambah ke Keranjang</button>
+          </article>
+
+          <article class="product-card" data-product='{"id":"donut-cocoa","name":"Donut Cocoa","price":15000}'>
+            <img src="assets/img/donut.svg" alt="Donut Cocoa">
+            <h3>Donut Cocoa</h3>
+            <p class="price">Rp 15.000</p>
+            <button class="btn add-cart">Tambah ke Keranjang</button>
+          </article>
+
+          <article class="product-card" data-product='{"id":"muffin-choco","name":"Muffin Choco","price":18000}'>
+            <img src="assets/img/muffin.svg" alt="Muffin Choco">
+            <h3>Muffin Choco</h3>
+            <p class="price">Rp 18.000</p>
+            <button class="btn add-cart">Tambah ke Keranjang</button>
+          </article>
+        </div>
+        <button class="slider__ctrl next" data-next aria-label="Berikutnya">›</button>
+      </div>
+    </section>
+
+    <section id="menu" class="section">
+      <div class="section__head">
+        <h2>Menu Pilihan</h2>
+        <p>Pilihan kopi & pastry andalan.</p>
+      </div>
+      <div class="grid">
+        <article class="menu-card reveal">
+          <img src="assets/img/coffee.svg" alt="Espresso">
+          <div>
+            <h3>Espresso</h3>
+            <p>Espresso single shot dengan crema pekat.</p>
+          </div>
+          <strong class="price">Rp 18.000</strong>
+          <button class="btn add-cart" data-product='{"id":"espresso","name":"Espresso","price":18000}'>Tambah</button>
+        </article>
+
+        <article class="menu-card reveal">
+          <img src="assets/img/croissant.svg" alt="Almond Croissant">
+          <div>
+            <h3>Almond Croissant</h3>
+            <p>Lapisan flaky dengan isian almond cream.</p>
+          </div>
+          <strong class="price">Rp 25.000</strong>
+          <button class="btn add-cart" data-product='{"id":"almond-croissant","name":"Almond Croissant","price":25000}'>Tambah</button>
+        </article>
+
+        <article class="menu-card reveal">
+          <img src="assets/img/cake.svg" alt="Cheesecake">
+          <div>
+            <h3>Cheesecake</h3>
+            <p>Cheesecake lembut, base biskuit renyah.</p>
+          </div>
+          <strong class="price">Rp 32.000</strong>
+          <button class="btn add-cart" data-product='{"id":"cheesecake","name":"Cheesecake","price":32000}'>Tambah</button>
+        </article>
+      </div>
+    </section>
+
+    <section id="testimoni" class="section">
+      <div class="section__head">
+        <h2>Testimoni Pelanggan</h2>
+        <p>Ceritakan pengalamanmu di Deja Vu Cafe.</p>
+      </div>
+
+      <form id="formTesti" class="card form">
+        <label>Nama
+          <input type="text" name="nama" placeholder="Nama kamu" required>
+        </label>
+        <label>Rating
+          <select name="rating" required>
+            <option value="5">⭐⭐⭐⭐⭐ (5)</option>
+            <option value="4">⭐⭐⭐⭐ (4)</option>
+            <option value="3">⭐⭐⭐ (3)</option>
+            <option value="2">⭐⭐ (2)</option>
+            <option value="1">⭐ (1)</option>
+          </select>
+        </label>
+        <label>Pesan
+          <textarea name="pesan" rows="3" placeholder="Tulis testimoni..." required></textarea>
+        </label>
+        <button class="btn btn-primary" type="submit">Kirim Testimoni</button>
+      </form>
+
+      <div id="listTesti" class="testi-list"></div>
+    </section>
+
+    <section id="kontak" class="section">
+      <div class="section__head">
+        <h2>Kritik & Saran</h2>
+        <p>Kami sangat terbantu dengan masukanmu.</p>
+      </div>
+
+      <form id="formKritik" class="card form">
+        <label>Nama
+          <input type="text" name="nama" placeholder="Nama kamu" required>
+        </label>
+        <label>Email
+          <input type="email" name="email" placeholder="email@contoh.com" required>
+        </label>
+        <label>Pesan
+          <textarea name="pesan" rows="4" placeholder="Tulis kritik/saran..." required></textarea>
+        </label>
+        <button class="btn" type="submit">Kirim</button>
+        <p class="muted">*Form ini hanya simulasi (front-end saja).</p>
+      </form>
+    </section>
+  </main>
+
+  <aside id="cartDrawer" class="cart-drawer" aria-hidden="true" aria-labelledby="cartTitle" role="dialog">
+    <div class="cart-drawer__panel card">
+      <header class="cart-drawer__head">
+        <h3 id="cartTitle">Keranjang</h3>
+        <button id="closeCart" class="icon-btn" aria-label="Tutup keranjang">✕</button>
+      </header>
+      <div id="cartItems" class="cart-items"></div>
+      <footer class="cart-drawer__foot">
+        <div class="cart-total">Total: <strong id="cartTotal">Rp 0</strong></div>
+        <button id="checkoutBtn" class="btn btn-primary">Checkout</button>
+      </footer>
+    </div>
+  </aside>
+
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div>
+        <h4>Alamat Toko</h4>
+        <p>Jalan Madrasah 1, Cilungup Indah, Jakarta Timur</p>
+      </div>
+      <div>
+        <h4>Jam Buka</h4>
+        <p>Setiap hari 08.00–22.00</p>
+      </div>
+      <div>
+        <h4>Kontak</h4>
+        <p>WhatsApp: 08xx-xxxx-xxxx</p>
+      </div>
+    </div>
+    <p class="muted">© 2025 Deja Vu Cafe. All rights reserved.</p>
+  </footer>
+
+  <script src="assets/js/app.js" defer></script>
+</body>
+</html>
